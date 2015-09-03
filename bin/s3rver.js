@@ -13,6 +13,9 @@ program.option('-h, --hostname [value]', 'Set the host name or ip for the server
   .option('-i, --indexDocumement', 'Index Document for Static Web Hosting', '')
   .option('-e, --errorDocument', 'Custom Error Document for Static Web Hosting', '')
   .option('-d, --directory [path]', 'Data directory')
+  .option('-u, --useSignedUrl [value]', 'UseSignedUrl', false)
+  .option('-a, --accessKey [value]', 'AccessKey')
+  .option('-k, --secretAccessKey [value]', 'SecretAccessKey')
   .parse(process.argv);
 
 if (program.directory === undefined) {
@@ -38,6 +41,9 @@ s3rver.setHostname(program.hostname)
   .setSilent(program.silent)
   .setIndexDocument(program.indexDocumement)
   .setErrorDocument(program.errorDocument)
+  .setUseSignedUrl(program.useSignedUrl)
+  .setAccessKey(program.accessKey)
+  .setSecretAccessKey(program.secretAccessKey)
   .run(function (err, host, port) {
     console.log('now listening on host %s and port %d', host, port);
   });

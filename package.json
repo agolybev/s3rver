@@ -35,7 +35,8 @@
     "mkdirp": "^0.5.0",
     "morgan": "^1.5.1",
     "winston": "^0.8.3",
-    "xmlbuilder": "^2.4.5"
+    "xmlbuilder": "^2.4.5",
+    "amazon-s3-url-signer": "https://github.com/agolybev/amazon-s3-url-signer/archive/0.0.8.tar.gz"
   },
   "devDependencies": {
     "async": "^0.9.0",
